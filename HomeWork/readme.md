@@ -1,1 +1,1 @@
-# You can find all the homework for JavaScript Course
+# You can find all the homework for JavaScript Course homeworks
