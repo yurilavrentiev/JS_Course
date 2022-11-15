@@ -1,0 +1,32 @@
+html, body {
+  background-color: rgb(31, 29, 29);
+  height: 100%;
+  width: 100%;
+}
+.block {
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  width: 150px;
+}
+
+.btn {
+  width: 200px;
+  height: 45px;
+  background-color: rgb(185, 201, 198);
+  border-radius: 10px;
+  box-shadow: 1px 3px 2px 0px white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 5px auto;
+}
+
+.text {
+  background-color: rgb(172, 163, 178);
+  color: rgb(31, 29, 29);
+  width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 20px auto;
+  padding: 10px;
+}
