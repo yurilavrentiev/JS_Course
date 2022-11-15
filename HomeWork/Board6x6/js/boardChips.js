@@ -17,7 +17,6 @@ const boardState = {
   selectedChip: null
 }
 
-// console.log(boardState.boardCells)
 
 function setDefaultPositions () {
   const defaultIds = [1, 3, 5, 31, 33 ,35];
@@ -122,7 +121,6 @@ render(boardState, mainBlock);
 
 mainBlock.addEventListener('dragstart', dragStart);
 mainBlock.addEventListener('dragend', dragEnd);
-// mainBlock.addEventListener('dragenter', dragEnter);
 mainBlock.addEventListener('dragleave', dragLeave);
 mainBlock.addEventListener('drop', drop);
 mainBlock.addEventListener('dragover', allow);
@@ -140,11 +138,10 @@ function dragLeave(event) {
 
 function dragStart(event) {
   boardState.selectedChip = event.target.id
-  // event.dataTransfer.setData('id', event.target.id)
+
   const chip = event.target;
   chip.classList.add('active')
   setTimeout(() => chip.classList.add('hide'), 0);
-  // console.log(chip)
 }
 
 function dragEnd (event) {
@@ -182,11 +179,12 @@ function allow (event) {
 }
 
 function drop (event) {
+
   const chip = boardState.boardChips.find(item => item.id === boardState.selectedChip)
   const target = event.target.closest('.block');
   const isRed = chip.color === 'red'
   const chipPositions = boardState.boardChips.map((item) => item.position)
-  // console.log(chipPositions)
+  
   if ( isRed && target.classList.contains('black') && !chipPositions.includes(+target.id)) {
     chip.position = +target.id
   } 
