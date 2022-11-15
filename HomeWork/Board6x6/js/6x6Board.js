@@ -23,9 +23,8 @@ function createBoard () {
 createBoard()
 
 const root = document.querySelector('.root');
-// const zone2 = document.querySelector('.zone2');
 const chip = document.querySelector('.chipBlue');
-// console.log(zone1, zone2, chip)
+
 
 chip.addEventListener('dragstart', drag);
 
@@ -35,12 +34,11 @@ function drag (event) {
 
 root.addEventListener('drop', drop);
 root.addEventListener('dragover', allow);
-// zone2.addEventListener('drop', drop);
-// zone2.addEventListener('dragover', allow);
+
 
 function allow (event) {
   event.preventDefault()
-  // console.log(event.target.id)
+ 
 }
 
 function drop (event) {
